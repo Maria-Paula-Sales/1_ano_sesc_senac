@@ -14,18 +14,18 @@
     --primary: #6366f1;
     --primary-hover: #818cf8;
     --accent: #38bdf8;
-    --sucess: #22c55e;
+    --success: #22c55e;
     --warning: #f59e0b;
     --danger: #ef4444;
     --item: #0ea5e9;
     --item-selected: #f97316;
     --radius-small: 8px;
     --radius-medium: 12px;
-    --radius-large:18px;
-    --shadow:0 18px 45px rgba(0, 0, 0, 0.24);
+    --radius-large: 18px;
+    --shadow: 0 18px 45px rgba(0, 0, 0, 0.24);
 }
  
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -42,14 +42,14 @@ body {
     color: var(--text);
     background:
         radial-gradient(circle at top left,
-         rgba(99, 102, 241, 0.16),
-        transparent 34rem),
+            rgba(99, 102, 241, 0.16),
+            transparent 34rem),
         var(--background);
-    font-family: Inter, Arial, Arial, Helvetica, sans-serif;
+    font-family: Inter, Arial, Helvetica, sans-serif;
     line-height: 1.5;
 }
  
-button
+button,
 select {
     font: inherit;
 }
@@ -63,7 +63,7 @@ select {
 button:focus-visible,
 a:focus-visible,
 select:focus-visible {
-    outline:3px solid #facc15;
+    outline: 3px solid #facc15;
     outline-offset: 3px;
 }
  
@@ -93,14 +93,14 @@ select:focus-visible {
     display: inline-flex;
     align-items: center;
     width: fit-content;
-    padding:6px 11px;
+    padding: 6px 11px;
     color: #c7d2fe;
-    background: rgba(99, 102, 241, 0.16);
+    background-color: rgba(99, 102, 241, 0.16);
     border: 1px solid rgba(129, 140, 248, 0.28);
     border-radius: 999px;
     font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.08rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
  
@@ -108,14 +108,14 @@ select:focus-visible {
     margin-top: 16px;
     font-size: clamp(2rem, 7vw, 4.5rem);
     line-height: 1;
-    letter-spacing: -0,05em;
+    letter-spacing: -0.05em;
 }
  
 .page-header p {
     max-width: 760px;
     margin: 20px auto 0;
     color: var(--text-muted);
-    font-size: clamp(1rem, 2vw, 1.15rem); /*   1.15rem*/
+    font-size: clamp(1rem, 2vw, 1.15rem); /*      1.15rem*/
 }
  
 .property-navigation {
@@ -154,9 +154,9 @@ select:focus-visible {
     border-color: var(--primary-hover);
 }
  
-/* ================================================
-    Grupois e seções
-================================================ */
+/* ===========================================
+   Grupos e seções
+=========================================== */
  
 main {
     max-width: 1200px;
@@ -182,13 +182,13 @@ main {
     color: var(--text-muted);
 }
  
-/* ===========================================================
-    CARD DE DEMONSTRAÇÃO
+/* ==========================================================
+   CARD DE DEMONSTRAÇÃO
  
-    Cada propriedade é apresentada dentro de um card separado.
+   Cada propriedade é apresentada dentro de um card separado.
  
-    overflow: hidden impede que elementos ultrapassem as bordas.
-=========================================================== */
+   overflow: hidden impede que elementos ultrapassem as bordas.
+========================================================== */
  
 .demo {
     margin-bottom: 36px;
@@ -200,12 +200,12 @@ main {
     box-shadow: var(--shadow);
 }
  
-/* ============================================================
-    CABEÇALHO INTERNO DA DEMONSTRAÇÃO
+/* ==========================================================
+   CABEÇALHO INTERNO DA DEMONSTRAÇÃO
  
-    Utiliza Flexblox para separar o título da propriedade e
-    o botão de restauração.
-============================================================ */
+   Utiliza Flexbox para separar o título da propriedade e
+   o botão de restauração.
+========================================================== */
  
 .demo-heading {
     display: flex;
@@ -214,21 +214,21 @@ main {
     gap: 20px;
 }
  
-.demo-heading {
+.demo-heading h2 {
     margin-top: 8px;
     color: var(--accent);
     font-size: clamp(1.55rem, 4vw, 2.2rem);
+}
  
- 
-}.item-property {
+.item-property {
     color: #fed7aa;
     background-color: rgba(249, 115, 22, 0.14);
     border-color: rgba(249, 115, 22, 0.3);
 }
  
-.challange-label {
+.challenge-label {
     color: #bbf7d0;
-    background: rgba(34, 197, 94, 0.14);
+    background-color: rgba(34, 197, 94, 0.14);
     border-color: rgba(34, 197, 94, 0.3);
 }
  
@@ -239,16 +239,16 @@ main {
     line-height: 1.7;
 }
  
-.demo-introduction {
+.demo-introduction strong {
     color: white;
 }
  
-/* ============================================================
-    DESCRIÇÃO DINÂMICA
+/* ==========================================================
+   DESCRIÇÃO DINÂMICA
  
-    Este texto será atualizado pelo JavaScript quando o aluno
-    selecionar outro valor da propriedade;
-============================================================= */
+   Este texto será atualizado pelo JavaScript quando o aluno
+   selecionar outro valor da propriedade.
+========================================================== */
  
 .property-description {
     min-height: 52px;
@@ -260,9 +260,11 @@ main {
     border-radius: 0 var(--radius-small) var(--radius-small);
 }
  
-/*====================================================
-botoes e controles
-====================================================*/
+/* ==========================================================
+   BOTÕES E CONTROLES
+========================================================== */
+ 
+/* Organiza os botões em linha e permite quebra automática. */
  
 .buttons {
     display: flex;
@@ -271,15 +273,16 @@ botoes e controles
     margin-bottom: 18px;
 }
  
-/*====================================================
-botao padrao
+/* ==========================================================
+   BOTÃO PADRÃO
  
-min-height: 44px cria uma area confortavel para que clique tambem em dispositivos com tela sencivel ao toque
-====================================================*/
+   min-height: 44px cria uma área confortável para clique
+   também em dispositivos com tela sensível ao toque.
+========================================================== */
  
-button{
+button {
     min-height: 44px;
-    padding: 10 px 17px;
+    padding: 10px 17px;
     color: white;
     background-color: var(--primary);
     border: 1px solid transparent;
@@ -287,27 +290,29 @@ button{
     cursor: pointer;
     font-weight: 700;
     transition:
-        tranform 0.2s,
-        background-color 0.02s,
-        border-color 0.02s,
-        box-shadow 0.02;
+        transform 0.2s,
+        background-color 0.2s,
+        border-color 0.2s,
+        box-shadow 0.2s;
 }
  
-button.hover {
+button:hover {
     background-color: var(--primary-hover);
     transform: translateY(-1px);
 }
  
-/*====================================================
-botap ativo
-a classe active é controlada pelo javascript e mostra qual valor css esta selecionado
-====================================================*/
+/* ==========================================================
+   BOTÃO ATIVO
  
-button.avtive {
+   A classe active é controlada pelo JavaScript e mostra qual
+   valor CSS está selecionado.
+========================================================== */
+ 
+button.active {
     color: #052e16;
-    background-color: var(--sucess);
+    background-color: var(--success);
     border-color: #86efac;
-    box-shadow: 0 0 0 4px rgba(34, 196, 94, 0.14);
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.14);
 }
  
 .reset-button,
@@ -316,7 +321,6 @@ button.avtive {
     background-color: var(--surface-soft);
     border-color: var(--border);
     font-weight: 600;
- 
 }
  
 .reset-button:hover,
@@ -325,13 +329,14 @@ button.avtive {
     background-color: var(--surface-highlight);
 }
  
-/*====================================================
-esta classe é adicionada temporariamente pelo javascript após o codigo css ser copiado
-====================================================*/
+/*
+   Esta classe é adicionada temporariamente pelo JavaScript
+   após o código CSS ser copiado.
+*/
  
 .copy-button.copy-success {
     color: #052e16;
-    background-color: var(--sucess);
+    background-color: var(--success);
     border-color: #86efac;
 }
  
@@ -339,10 +344,180 @@ esta classe é adicionada temporariamente pelo javascript após o codigo css ser
     margin-bottom: 0;
 }
  
-/*====================================================
-controle da demoonstraçao flex-shrink
+/* ==========================================================
+   CONTROLE DA DEMONSTRAÇÃO flex-shrink
  
-flex-shirink só é percebido quando falta espaco
+   flex-shrink só é percebido quando falta espaço.
  
-por isso esta area permite alterar a largura do container
-====================================================*/
+   Por isso esta área permite alterar a largura do container.
+========================================================== */
+ 
+.size-controls {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+    padding: 14px;
+    background-color: var(--surface-soft);
+    border-radius: var(--radius-medium);
+}
+ 
+.size-controls span {
+    color: var(--text-muted);
+    font-weight: 700;
+}
+ 
+/* ==========================================================
+   CONTAINERS E ITENS
+========================================================== */
+ 
+/* ==========================================================
+   FLEX CONTAINER BASE
+ 
+   Esta é a classe principal do laboratório.
+ 
+   display: flex ativa o Flexbox.
+   flex-direction: row define a direção inicial.
+   gap cria espaço entre os Flex Items.
+ 
+   position: relative permite posicionar rótulos e indicadores
+   dentro do container.
+ 
+   overflow: auto cria rolagem quando necessário.
+========================================================== */
+ 
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 350px;
+    gap: 10px;
+    padding: 46px 20px 20px;
+    overflow: auto;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        var(--surface-highlight);
+    background-size: 32px 32px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+    transition: 0.35s;
+}
+ 
+/* ==========================================================
+   RÓTULO DO CONTAINER
+ 
+   position: absolute posiciona o rótulo sobre a área visual.
+ 
+   pointer-events: none impede que ele bloqueie cliques.
+========================================================== */
+ 
+.container-label {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    z-index: 5;
+    padding: 4px 8px;
+    color: #d4d4d8;
+    background-color: rgba(9, 9, 11, 0.8);
+    border-radius: 5px;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 0.72rem;
+    pointer-events: none;
+}
+ 
+/* ==========================================================
+   FLEX ITEM BASE
+ 
+   Cada card numerado representa um Flex Item.
+ 
+   O próprio item também usa display: flex para centralizar
+   seu conteúdo interno.
+ 
+   flex: 0 1 auto significa:
+   - não crescer
+   - poder encolher
+   - usar tamanho automático como base
+========================================================== */
+ 
+.item {
+    position: relative;
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    color: white;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.16), transparent 50%),
+        var(--item);
+    border: 2px solid rgba(255, 255, 255, 0.28);
+    border-radius: 12px;
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    font-size: 2rem;
+    font-weight: 800;
+    transition: 0.35s;
+}
+ 
+/* ==========================================================
+   PSEUDOELEMENTO ::before
+
+   Cria o texto "item" sem adicionar outro elemento no HTML.
+
+   É usado apenas como elemento visual.
+========================================================== */
+
+.item::before {
+    content: "item";
+    position: absolute;
+    top: 7px;
+    left: 8px;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.72;
+}
+
+.item small {
+    position: absolute;
+    bottom: 8px;
+    font-size: 0.58rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Destaca visualmente o item manipulado na demonstração. */
+
+.item-selected {
+    background: 
+    linear-gradient(145deg, rgba(255, 255, 255. 0.18), transparent 50%),
+    var(--item-selected);
+    border-color: #fdba74;
+}
+
+/* ==========================================================
+    INDICADORES DE EIXO
+
+    Mostram o eixo principal e o eixo secundário do flexbox.
+========================================================== */
+
+.axis {
+    position: absolute;
+    z-index: 4;
+    padding: 4px 8px;
+    color: #f4f4f5;
+    background-color: rgba(9, 9, 11, 0.82);
+    border-radius: 5px;
+
+
+
+
+
+    
+}
