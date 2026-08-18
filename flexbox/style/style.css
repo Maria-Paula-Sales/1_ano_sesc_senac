@@ -466,12 +466,12 @@ button.active {
  
 /* ==========================================================
    PSEUDOELEMENTO ::before
-
+ 
    Cria o texto "item" sem adicionar outro elemento no HTML.
-
+ 
    É usado apenas como elemento visual.
 ========================================================== */
-
+ 
 .item::before {
     content: "item";
     position: absolute;
@@ -483,7 +483,7 @@ button.active {
     text-transform: uppercase;
     opacity: 0.72;
 }
-
+ 
 .item small {
     position: absolute;
     bottom: 8px;
@@ -491,22 +491,22 @@ button.active {
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
-
+ 
 /* Destaca visualmente o item manipulado na demonstração. */
-
+ 
 .item-selected {
-    background: 
-    linear-gradient(145deg, rgba(255, 255, 255. 0.18), transparent 50%),
-    var(--item-selected);
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.18), transparent 50%),
+        var(--item-selected);
     border-color: #fdba74;
 }
-
+ 
 /* ==========================================================
     INDICADORES DE EIXO
-
+ 
     Mostram o eixo principal e o eixo secundário do flexbox.
 ========================================================== */
-
+ 
 .axis {
     position: absolute;
     z-index: 4;
@@ -514,10 +514,91 @@ button.active {
     color: #f4f4f5;
     background-color: rgba(9, 9, 11, 0.82);
     border-radius: 5px;
-
-
-
-
-
-    
+    font-size: 0.68rem;
+    pointer-events: none;
 }
+ 
+.axis-main {
+    right: 12px;
+    bottom: 8px;
+}
+ 
+/*
+    writing-mode altera a direção da escrita para apresentar
+    o rótulo verticalmente.
+*/
+ 
+.axis-cross {
+    top: 48px;
+    right: 8px;
+    writing-mode: vertical-rl;
+}
+ 
+/* ==========================================================
+    PAINEL DE CÓDIGO
+========================================================== */
+ 
+/* ==========================================================
+    ESTRUTURA DO PAINEL
+ 
+    CSS grid cria duas colunas:
+    - código ocupando o espaço disponível
+    - botão de copiar com largura automática
+========================================================== */
+ 
+.code-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: end;
+    margin-top: 22px;
+}
+ 
+/* ==========================================================
+    BLOCO DE CÓDIGO
+ 
+    Usa fonte monoespaçada para melhorar a leitura.
+ 
+    overflow-x: auto adiciona rolagem quando o conteúdo não
+    cabe em telas pequenas.
+========================================================== */
+ 
+.code {
+    position: relative;
+    min-width: 0;
+    padding: 42px 20px 20px;
+    overflow-x: auto;
+    color: #e4e4e7;
+    background-color: #050506;
+    border: 1px solid #3f3f46;
+    border-radius: 10px;
+    font-family: Consolas, Monaco, monospace;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    line-height: 1.65;
+}
+ 
+/* Cria o rótulo "CSS" sem precisar adicioná-lo no HTML. */
+ 
+.code::before {
+    content: "CSS";
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    color: #a1a1aa;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+ 
+.code strong {
+    color: var(--success);
+}
+ 
+/* ==========================================================
+   CONFIGURAÇÕES ESPECÍFICAS DAS DEMONSTRAÇÕES
+ 
+   A classe .container define o comportamento base.
+ 
+   As classes abaixo alteram apenas o necessário para tornar
+   cada propriedade visível e didática.
+========================================================== */
